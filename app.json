@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "OnePapier",
+    "slug": "DocScan2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "docscan2",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.husko.docscan2",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#2C2C2A",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.jobswipestudio.onepapier",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR",
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "versionCode": 36
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-calendar",
+      "expo-notifications",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.9.25",
+            "targetSdkVersion": 35,
+            "compileSdkVersion": 35
+          }
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 400,
+          "resizeMode": "contain",
+          "backgroundColor": "#2C2C2A",
+          "dark": {
+            "backgroundColor": "#2C2C2A"
+          }
+        }
+      ],
+      "./plugins/withSplashFix"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4f15a792-8cf9-4fba-a788-6ee53413fa2f"
+      }
+    },
+    "owner": "husko"
+  }
+}
